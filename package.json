@@ -2,15 +2,20 @@
   "name": "backendtcc",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "src/server.js",
   "dependencies": {
+    "bcrypt": "^6.0.0",
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
-    "knex": "^3.2.10"
+    "jsonwebtoken": "^9.0.3",
+    "knex": "^3.2.10",
+    "pg": "^8.23.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bd": "node src/server.js",
+    "migrate": "knex migrate:latest --knexfile knexfile.js"
   },
   "keywords": [],
   "author": "",
